@@ -120,4 +120,6 @@ window.checkoutOrder = function () {
     `${whatsappNumberLink}?text=${encodeURIComponent(message)}`,
     "_blank"
   );
+};window.addComboToCart = function () {
+  window.addToCart("Cold Coffee + Brownie Combo", 299);
 };
