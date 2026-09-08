@@ -508,4 +508,132 @@ footer {
     bottom: 135px;
     right: 18px;
   }
+}/* Premium finishing touches */
+
+body {
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--orange);
+  color: white;
+}
+
+.navbar {
+  backdrop-filter: blur(12px);
+  box-shadow: 0 2px 16px rgba(61, 36, 24, 0.06);
+}
+
+.hero-content {
+  animation: fadeUp 0.9s ease-out;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-card {
+  border: 1px solid rgba(111, 66, 48, 0.08);
+}
+
+.menu-card h3 {
+  transition: color 0.25s;
+}
+
+.menu-card:hover h3 {
+  color: var(--orange);
+}
+
+.primary-button,
+.secondary-button,
+.nav-button,
+.whatsapp-float,
+.cart-toggle {
+  letter-spacing: 0.2px;
+}
+
+.section-heading h2 {
+  margin: auto;
+  max-width: 720px;
+}
+
+footer {
+  font-size: 0.92rem;
+  letter-spacing: 0.2px;
+}.special-section {
+  align-items: center;
+  background: var(--coffee);
+  display: grid;
+  gap: 55px;
+  grid-template-columns: 1fr 1fr;
+  padding: 80px 8%;
+}
+
+.special-content h2 {
+  color: white;
+  margin-bottom: 18px;
+}
+
+.special-content > p:not(.eyebrow) {
+  color: #e9d7cb;
+  line-height: 1.7;
+  margin-bottom: 22px;
+  max-width: 480px;
+}
+
+.special-price {
+  align-items: center;
+  display: flex;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.special-price span {
+  color: #c9ada0;
+  font-size: 1.15rem;
+  text-decoration: line-through;
+}
+
+.special-price strong {
+  color: #f2a673;
+  font-family: "Playfair Display", serif;
+  font-size: 2.2rem;
+}
+
+.special-image {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.12)),
+    url("https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=1000&q=85")
+    center/cover;
+  border-radius: 18px;
+  height: 360px;
+}
+
+@media (max-width: 800px) {
+  .special-section {
+    grid-template-columns: 1fr;
+    padding: 70px 6%;
+  }
+
+  .special-image {
+    height: 260px;
+  }
+}.menu-category {
+  color: var(--orange);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  margin-bottom: 8px;
+}.combo-button {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 }
