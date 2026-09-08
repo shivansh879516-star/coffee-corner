@@ -636,4 +636,50 @@ footer {
   border: none;
   cursor: pointer;
   font-family: inherit;
+}@media (max-width: 500px) {
+  .cart-panel {
+    bottom: 125px;
+    max-height: 52vh;
+    padding: 16px;
+    right: 12px;
+    width: calc(100% - 24px);
+  }
+
+  .cart-header {
+    margin-bottom: 10px;
+  }
+
+  .cart-header h3 {
+    font-size: 1.35rem;
+  }
+
+  .cart-item {
+    padding: 9px 0;
+  }
+
+  .cart-item strong {
+    font-size: 0.9rem;
+  }
+
+  .cart-item small {
+    font-size: 0.75rem;
+  }
+
+  .cart-total {
+    margin: 14px 0;
+  }
+
+  .order-type {
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+  }
+
+  #table-number {
+    padding: 10px;
+  }
+
+  .checkout-button {
+    margin-top: 12px;
+    padding: 10px;
+  }
 }
