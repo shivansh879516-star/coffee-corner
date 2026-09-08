@@ -62,6 +62,7 @@
     <h3>Espresso</h3>
     <p>A bold, aromatic double shot for true coffee lovers.</p>
     <span>₹120</span>
+    <button class="add-button" onclick="addToCart('Espresso', 120)">Add to Order</button>
   </article>
 
   <article class="menu-card">
@@ -69,6 +70,7 @@
     <h3>Cappuccino</h3>
     <p>Fresh espresso with steamed milk and a creamy foam top.</p>
     <span>₹180</span>
+    <button class="add-button" onclick="addToCart('Cappuccino', 180)">Add to Order</button>
   </article>
 
   <article class="menu-card">
@@ -76,6 +78,7 @@
     <h3>Cold Coffee</h3>
     <p>Chilled coffee blended smooth, rich and refreshing.</p>
     <span>₹200</span>
+    <button class="add-button" onclick="addToCart('Cold Coffee', 200)">Add to Order</button>
   </article>
 
   <article class="menu-card">
@@ -83,6 +86,7 @@
     <h3>Grilled Veg Sandwich</h3>
     <p>Loaded with fresh veggies, cheese and our special sauce.</p>
     <span>₹180</span>
+    <button class="add-button" onclick="addToCart('Grilled Veg Sandwich', 180)">Add to Order</button>
   </article>
 
   <article class="menu-card">
@@ -90,6 +94,7 @@
     <h3>Peri Peri Fries</h3>
     <p>Crispy golden fries tossed in smoky peri peri seasoning.</p>
     <span>₹160</span>
+    <button class="add-button" onclick="addToCart('Peri Peri Fries', 160)">Add to Order</button>
   </article>
 
   <article class="menu-card">
@@ -97,6 +102,7 @@
     <h3>Chocolate Brownie</h3>
     <p>Warm, fudgy chocolate brownie served with love.</p>
     <span>₹150</span>
+    <button class="add-button" onclick="addToCart('Chocolate Brownie', 150)">Add to Order</button>
   </article>
 </div>
     </section>
@@ -115,7 +121,27 @@
         <a href="#contact" class="text-link">Come say hello →</a>
       </div>
     </section>
+<section class="gallery-section">
+  <div class="section-heading">
+    <p class="eyebrow">COFFEE, FOOD & GOOD VIBES</p>
+    <h2>A little look inside Coffee Corner.</h2>
+  </div>
 
+  <div class="gallery-grid">
+    <img
+      src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=900&q=85"
+      alt="Coffee Corner café interior"
+    >
+    <img
+      src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=85"
+      alt="Fresh coffee at Coffee Corner"
+    >
+    <img
+      src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=900&q=85"
+      alt="Friends enjoying coffee"
+    >
+  </div>
+</section>
     <section class="contact-section" id="contact">
       <p class="eyebrow">FIND YOUR WAY HERE</p>
       <h2>Come in. Stay awhile.</h2>
@@ -134,6 +160,46 @@
         Message Us on WhatsApp
       </a>
     </section>
+    <button class="cart-toggle" onclick="toggleCart()">
+  🛒 Your Order <span id="cart-count">0</span>
+</button>
+
+<div class="cart-panel" id="cart-panel">
+  <div class="cart-header">
+    <h3>Your Order</h3>
+    <button onclick="toggleCart()">×</button>
+  </div>
+
+  <div id="cart-items">
+    <p class="empty-cart">Your cart is empty.</p>
+  </div>
+
+  <div class="cart-total">
+    Total: <span id="cart-total">₹0</span>
+  </div>
+
+  <div class="order-type">
+    <p>Order type:</p>
+    <label>
+      <input type="radio" name="order-type" value="Dine-in" checked>
+      Dine-in
+    </label>
+    <label>
+      <input type="radio" name="order-type" value="Takeaway">
+      Takeaway
+    </label>
+  </div>
+
+  <input
+    type="text"
+    id="table-number"
+    placeholder="Table number (for dine-in)"
+  >
+
+  <button class="checkout-button" onclick="checkoutOrder()">
+    Send Order on WhatsApp
+  </button>
+</div>
   </main>
 
   <footer>
@@ -147,5 +213,6 @@
 >
   💬 Order on WhatsApp
 </a>
+<script src="script.js"></script>
 </body>
 </html>
